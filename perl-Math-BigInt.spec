@@ -1,18 +1,18 @@
 %define module  Math-BigInt
 %define name    perl-%{module}
 %define version 1.87
-%define release %mkrel 1
+%define release %mkrel 2
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
-Summary:        Arbitrary size integer/float math package
-License:        GPL or Artistic
-Group:          Development/Perl
-Url:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/Math/%{module}-%{version}.tar.gz
-BuildRequires:  perl-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+Name:       %{name}
+Version:    %{version}
+Release:    %{release}
+Summary:    Arbitrary size integer/float math package
+License:    GPL or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{module}
+Source:     http://www.cpan.org/modules/by-module/Math/%{module}-%{version}.tar.gz
+BuildArch:  noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 All operators (including basic math operations) are overloaded if you declare
@@ -28,7 +28,7 @@ what you expect.
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-%make CFLAGS="%{optflags}"
+%make
 
 %check
 %make test
