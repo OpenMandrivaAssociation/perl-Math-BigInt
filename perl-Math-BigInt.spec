@@ -12,7 +12,6 @@ Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/Math/%{module}-%{version}.tar.gz
 BuildArch:  noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 All operators (including basic math operations) are overloaded if you declare
