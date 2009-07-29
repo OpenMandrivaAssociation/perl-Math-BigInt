@@ -1,18 +1,18 @@
-%define module  Math-BigInt
-%define name    perl-%{module}
-%define version 1.89
-%define release %mkrel 2
+%define upstream_name    Math-BigInt
+%define upstream_version 1.89
 
-Name:       %{name}
-Version:    %{version}
-Release:    %{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Arbitrary size integer/float math package
-License:    GPL or Artistic
+License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Math/%{module}-%{version}.tar.gz
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Math/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildArch:  noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 All operators (including basic math operations) are overloaded if you declare
@@ -24,7 +24,7 @@ Operations with overloaded operators preserve the arguments which is exactly
 what you expect.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -45,4 +45,3 @@ rm -rf %{buildroot}
 %doc README
 %{perl_vendorlib}/Math
 %{_mandir}/*/*
-
