@@ -1,9 +1,9 @@
 %define upstream_name    Math-BigInt
-%define upstream_version 1.992
+%define upstream_version 1.993
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Arbitrary size integer/float math package
 License:    GPL+ or Artistic
