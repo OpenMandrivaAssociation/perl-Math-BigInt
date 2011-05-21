@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 3
 
 Summary:    Arbitrary size integer/float math package
 License:    GPL+ or Artistic
