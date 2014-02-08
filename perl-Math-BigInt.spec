@@ -3,7 +3,7 @@
 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	2
+Release:	3
 
 Summary:	Arbitrary size integer/float math package
 License:	GPL+ or Artistic
