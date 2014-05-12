@@ -1,10 +1,11 @@
 %define	modname	Math-BigInt
-%define	modver	1.997
+%define modver 1.9993
 
 Summary:	Arbitrary size integer/float math package
+
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	6
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -38,4 +39,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 %doc README
 %{perl_vendorlib}/Math
 %{_mandir}/man3/*
+
 
