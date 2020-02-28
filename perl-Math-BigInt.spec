@@ -13,6 +13,7 @@ Source0:	http://www.cpan.org/modules/by-module/Math/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRequires:	perl-Module-Install
+BuildRequires:	perl-Test-Simple
 
 %description
 All operators (including basic math operations) are overloaded if you declare
