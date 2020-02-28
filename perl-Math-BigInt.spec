@@ -1,17 +1,18 @@
 %define	modname	Math-BigInt
-%define modver 1.9993
+%define modver 1.999818
 
 Summary:	Arbitrary size integer/float math package
 
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	6
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Math/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
+BuildRequires:	perl-Module-Install
 
 %description
 All operators (including basic math operations) are overloaded if you declare
@@ -27,10 +28,10 @@ what you expect.
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
-%make test
+%make_build test
 
 %install
 %makeinstall_std
