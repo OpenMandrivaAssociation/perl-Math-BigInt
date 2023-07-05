@@ -1,15 +1,15 @@
 %define	modname	Math-BigInt
-%define modver 1.999838
+%define upstream_version 1.999838
 
 Summary:	Arbitrary size integer/float math package
 
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
+Version:	%perl_convert_version %{upstream_version}
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/Math/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Math/%{modname}-%{upstream_version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRequires:	perl-Module-Install
@@ -25,7 +25,7 @@ Operations with overloaded operators preserve the arguments which is exactly
 what you expect.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%setup -qn %{modname}-%{upstream_version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -41,5 +41,3 @@ perl Makefile.PL INSTALLDIRS=vendor
 %doc README
 %{perl_vendorlib}/Math
 %{_mandir}/man3/*
-
-
