@@ -5,7 +5,7 @@ Summary:	Arbitrary size integer/float math package
 
 Name:		perl-%{modname}
 Version:	%{upstream_version}
-Release:	1
+Release:	25
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
