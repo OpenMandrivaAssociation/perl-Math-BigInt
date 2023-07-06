@@ -4,7 +4,7 @@
 Summary:	Arbitrary size integer/float math package
 
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{upstream_version}
+Version:	%{upstream_version}
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
